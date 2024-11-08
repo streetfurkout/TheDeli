@@ -1,4 +1,11 @@
 package com.pluralsight;
 
-public class Topping {
+public abstract class Topping {
+    private String type;
+
+    public Topping(String type) {
+        this.type = type;
+    }
+
+    public abstract double getPrice();
 }
