@@ -2,10 +2,10 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-public class DrinkBuilder {
+public class DrinkBuilding {
     private final Scanner scanner = new Scanner(System.in);
 
-    public Drink buildDrink() {
+    public Drink buildingDrink() {
         System.out.println("\n--- Drink Building ---");
         System.out.print("Size (Small/Medium/Large): ");
         String size = scanner.nextLine();
