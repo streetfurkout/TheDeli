@@ -19,4 +19,14 @@ public class Receipt {
             directory.mkdir();
         }
 
-       
+        // Write order details to the file
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write("Order Summary:\n");
+            writer.write(order.toString());
+            writer.write("\nTotal Cost: $" + order.calculateTotal() + "\n");
+            System.out.println("Receipt saved as " + fileName);
+        } catch (IOException e) {
+            System.err.println("Error saving receipt: " + e.getMessage());
+        }
+    }
+}
