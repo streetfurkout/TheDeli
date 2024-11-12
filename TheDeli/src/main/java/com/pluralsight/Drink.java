@@ -10,8 +10,16 @@ public class Drink {
         else if (size.equalsIgnoreCase("medium")){this.price=2.50;}
         else if (size.equalsIgnoreCase("large")) {this.price=3.00;}
     }
-    }
+
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "size='" + size + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
