@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.orderedService;
+
+import com.pluralsight.Toppings.Topping;
 
 import java.util.List;
 
@@ -39,7 +41,7 @@ public class Sandwich {
         if (toasted) sb.append(" (toasted)");
         sb.append(" with toppings: ");
         for (Topping topping : toppings) {
-            sb.append(topping.getName()).append(", ");
+            sb.append(topping.getType()).append(", ");
         }
         return sb.toString();
     }

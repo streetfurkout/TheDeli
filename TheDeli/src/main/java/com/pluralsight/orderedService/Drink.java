@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.orderedService;
 
 public class Drink {
     private String size;

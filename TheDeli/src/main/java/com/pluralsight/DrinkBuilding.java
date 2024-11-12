@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import com.pluralsight.orderedService.Drink;
+
 import java.util.Scanner;
 
 public class DrinkBuilding {

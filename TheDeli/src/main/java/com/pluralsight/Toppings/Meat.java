@@ -1,6 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Toppings;
 
-public class Meat extends Topping{
+public class Meat extends Topping {
     public Meat(String type) {
         super(type);
     }
@@ -9,5 +9,6 @@ public class Meat extends Topping{
     public double getPrice() {
         return 0;
     }
+
 
 }
