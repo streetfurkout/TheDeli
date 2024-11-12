@@ -17,9 +17,6 @@ public class Drink {
 
     @Override
     public String toString() {
-        return "Drink{" +
-                "size='" + size + '\'' +
-                ", price=" + price +
-                '}';
+        return size + " drink ($" + price + ")";
     }
 }
