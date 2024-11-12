@@ -21,4 +21,9 @@ public class Order {
     public void addChips(Chip chips) {
         this.chips.add(chips);
     }
+    public double calculateTotal(){
+        double sandwichTotal = 0;
+        for(Sandwich sandwich : sandwiches);
+        sandwichTotal += sandwich.calculatePrice();
+    }
 }
