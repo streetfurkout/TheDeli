@@ -9,8 +9,6 @@ public class Chip {
 
     @Override
     public String toString() {
-        return "Chip{" +
-                "price=" + price +
-                '}';
+        return  "Chips ($" + price + ")";
     }
 }
