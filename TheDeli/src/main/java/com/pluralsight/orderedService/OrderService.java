@@ -2,7 +2,7 @@ package com.pluralsight.orderedService;
 
 import com.pluralsight.Order;
 
-public class OrderedService {
+public class OrderService {
     public double getTotal(Order order){
 
 
