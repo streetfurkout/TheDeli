@@ -32,3 +32,15 @@ public class Sandwich {
 
         return basePrice + toppingsCost;
     }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(size).append(" inch ").append(breadType).append(" sandwich");
+        if (toasted) sb.append(" (toasted)");
+        sb.append(" with toppings: ");
+        for (Topping topping : toppings) {
+            sb.append(topping.getName()).append(", ");
+        }
+        return sb.toString();
+    }
+}
