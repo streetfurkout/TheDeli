@@ -5,10 +5,12 @@ public class Chip {
 
     public double getPrice() {
         return price;
+    }
 
-        @Override
-        public String toString () {
-            return "Chips ($" + price + ")";
-        }
+    @Override
+    public String toString() {
+        return "Chip{" +
+                "price=" + price +
+                '}';
     }
 }
