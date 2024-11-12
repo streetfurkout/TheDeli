@@ -30,4 +30,6 @@ public class Order {
         for (Drink drink : drinks) {
         drinkTotal += drink.getPrice();
     }
+    double chipsTotal = chips.size() * 1.50;
+
 }
