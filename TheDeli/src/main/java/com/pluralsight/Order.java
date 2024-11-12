@@ -26,4 +26,8 @@ public class Order {
         for(Sandwich sandwich : sandwiches);
         sandwichTotal += sandwich.calculatePrice();
     }
+    double drinkTotal = 0;
+        for (Drink drink : drinks) {
+        drinkTotal += drink.getPrice();
+    }
 }
