@@ -5,5 +5,9 @@ public class Order {
     private List<Drink> drinks;
     private List<Chip> chips;
 
-
+    public Order() {
+        sandwiches = new ArrayList<>();
+        drinks = new ArrayList<>();
+        chips = new ArrayList<>();
+    }
 }
