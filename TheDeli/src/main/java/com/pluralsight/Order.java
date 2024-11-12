@@ -18,6 +18,18 @@ public class Order {
         chips = new ArrayList<>();
     }
 
+    public List<Sandwich> getSandwiches() {
+        return sandwiches;
+    }
+
+    public List<Drink> getDrinks() {
+        return drinks;
+    }
+
+    public List<Chips> getChips() {
+        return chips;
+    }
+
     public void addSandwich(Sandwich sandwich) {
         sandwiches.add(sandwich);
     }
@@ -30,21 +42,7 @@ public class Order {
         this.chips.add(chips);
     }
 
-    public double calculateTotal() {
-        double sandwichTotal = 0;
-        for (Sandwich sandwich : sandwiches) {
-            sandwichTotal += sandwich.calculatePrice();
-        }
 
-        double drinkTotal = 0;
-        for (Drink drink : drinks) {
-            drinkTotal += drink.getPrice();
-        }
-
-        double chipsTotal = chips.size() * 1.50;
-
-        return sandwichTotal + drinkTotal + chipsTotal;
-    }
 
     @Override
     public String toString() {
