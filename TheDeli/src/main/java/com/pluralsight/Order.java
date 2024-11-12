@@ -41,4 +41,13 @@ public class Order {
 
         return sandwichTotal + drinkTotal + chipsTotal;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "sandwiches=" + sandwiches +
+                ", drinks=" + drinks +
+                ", chips=" + chips +
+                '}';
+    }
 }
