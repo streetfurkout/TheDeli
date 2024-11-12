@@ -11,4 +11,7 @@ public class Drink {
         else if (size.equalsIgnoreCase("large")) {this.price=3.00;}
     }
     }
+    public double getPrice() {
+        return price;
+    }
 }
