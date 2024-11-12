@@ -1,14 +1,14 @@
 package com.pluralsight.orderedService;
 
-public class Chips {
-    private final double price = 1.50;
+public class Chips implements ICalculatePrice {
+    private String flavour;
 
-    public double getPrice() {
-        return price;
+    public Chips(String flavour) {
+        this.flavour = flavour;
     }
 
     @Override
-    public String toString() {
-        return  "Chips ($" + price + ")";
+    public double calculatePrice() {
+        return 1.5;
     }
 }
