@@ -8,7 +8,7 @@ public class Cheese extends Topping {
     }
 
     @Override
-    public double getPrice() {
-        return 0;
+    public double getPrice(String size) {
+        return .75 * (Integer.parseInt(size) / 4);
     }
 }

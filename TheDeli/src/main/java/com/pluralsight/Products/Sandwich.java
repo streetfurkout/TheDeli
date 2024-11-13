@@ -1,4 +1,4 @@
-package com.pluralsight.orderedService;
+package com.pluralsight.Products;
 
 import com.pluralsight.Toppings.Topping;
 

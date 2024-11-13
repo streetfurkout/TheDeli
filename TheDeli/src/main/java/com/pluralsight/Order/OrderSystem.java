@@ -1,4 +1,7 @@
-package com.pluralsight;
+package com.pluralsight.Order;
+import com.pluralsight.Order.Order;
+import com.pluralsight.UserInterface;
+
 import java.util.Scanner;
 
 public class OrderSystem {

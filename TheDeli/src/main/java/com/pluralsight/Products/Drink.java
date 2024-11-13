@@ -1,4 +1,4 @@
-package com.pluralsight.orderedService;
+package com.pluralsight.Products;
 
 public class Drink implements ICalculatePrice {
     private String size;

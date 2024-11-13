@@ -1,8 +1,8 @@
-package com.pluralsight;
+package com.pluralsight.Order;
 
-import com.pluralsight.orderedService.Chips;
-import com.pluralsight.orderedService.Drink;
-import com.pluralsight.orderedService.Sandwich;
+import com.pluralsight.Products.Chips;
+import com.pluralsight.Products.Drink;
+import com.pluralsight.Products.Sandwich;
 
 import java.util.ArrayList;
 import java.util.List;

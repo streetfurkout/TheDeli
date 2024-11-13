@@ -1,9 +1,14 @@
 package com.pluralsight;
 
-import com.pluralsight.orderedService.Chips;
-import com.pluralsight.orderedService.Drink;
-import com.pluralsight.orderedService.Sandwich;
+import com.pluralsight.Order.Order;
+import com.pluralsight.Order.Receipt;
+import com.pluralsight.Toppings.Topping;
+import com.pluralsight.Products.Chips;
+import com.pluralsight.Products.Drink;
+import com.pluralsight.Products.Sandwich;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -68,12 +73,6 @@ public class UserInterface {
         }
     }
 
-    private void addSandwich() {
-        SandwichBuilder sandwichBuilder = new SandwichBuilder();
-        Sandwich sandwich = sandwichBuilder.buildSandwich();
-        order.addSandwich(sandwich);
-        System.out.println("Sandwich Added.");
-    }
 
     public Drink addDrink() {
 

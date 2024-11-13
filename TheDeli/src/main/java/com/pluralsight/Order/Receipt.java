@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Order;
+
+import com.pluralsight.Order.Order;
 
 import java.io.FileWriter;
 import java.io.IOException;

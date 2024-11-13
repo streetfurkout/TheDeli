@@ -6,8 +6,8 @@ public class Meat extends Topping {
     }
 
     @Override
-    public double getPrice() {
-        return 0;
+    public double getPrice(String size) {
+        return 1 * (Integer.parseInt(size) / 4);
     }
 
 
