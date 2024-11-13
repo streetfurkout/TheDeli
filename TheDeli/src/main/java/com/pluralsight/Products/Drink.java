@@ -20,4 +20,12 @@ public class Drink implements ICalculatePrice {
         }else
             return 3.00;
     }
+
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "size='" + size + '\'' +
+                ", flavour='" + flavour + '\'' +
+                '}';
+    }
 }

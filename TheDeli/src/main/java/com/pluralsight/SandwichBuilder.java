@@ -56,10 +56,14 @@ public class SandwichBuilder {
 
     public List<Topping> selectToppings() {
         List<Topping> toppings = new ArrayList<>();
-        System.out.println("Which toppings would you like to add? 1- Meat, 2- Cheese, 3- Sauce, 4- Regular toppings. 0- Finish adding toppings");
-        String customerToppingSelection = scanner.nextLine();
+
+
 
         while (true) {
+
+            System.out.println("Which toppings would you like to add? 1- Meat, 2- Cheese, 3- Sauce, 4- Regular toppings. 0- Finish adding toppings");
+            String customerToppingSelection = scanner.nextLine();
+
             switch (customerToppingSelection) {
                 case "1":
                     toppings.addAll(addMeat());

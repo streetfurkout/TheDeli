@@ -1,6 +1,7 @@
 package com.pluralsight.Order;
 
 import com.pluralsight.Order.Order;
+import com.pluralsight.Products.OrderService;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,7 +26,8 @@ public class Receipt {
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write("Order Summary:\n");
             writer.write(order.toString());
-            writer.write("\nTotal Cost: $" + order.calculateTotal() + "\n");
+            OrderService orderService = new OrderService();
+            writer.write("\nTotal Cost: $" + orderService.getTotal(order) + "\n");
             System.out.println("Receipt saved as " + fileName);
         } catch (IOException e) {
             System.err.println("Error saving receipt: " + e.getMessage());

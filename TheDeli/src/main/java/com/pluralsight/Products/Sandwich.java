@@ -29,7 +29,7 @@ public class Sandwich {
 
         double toppingsCost = 0;
         for (Topping topping : toppings) {
-            toppingsCost += topping.getPrice();
+            toppingsCost += topping.getPrice(size);
         }
 
         return basePrice + toppingsCost;

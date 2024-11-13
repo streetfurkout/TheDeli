@@ -2,6 +2,7 @@ package com.pluralsight;
 
 import com.pluralsight.Order.Order;
 import com.pluralsight.Order.Receipt;
+import com.pluralsight.Products.OrderService;
 import com.pluralsight.Toppings.Topping;
 import com.pluralsight.Products.Chips;
 import com.pluralsight.Products.Drink;
@@ -15,14 +16,14 @@ public class UserInterface {
     private Order order;
     private Scanner scanner = new Scanner(System.in);
 
-    public UserInterface(Order order) {
-        this.order = order;
+    public UserInterface() {
+        this.order = new Order();
     }
 
 
     public void homeScreen(){
-    boolean running = true; {
-        while (running)
+    boolean running = true;
+        while (running){
         System.out.println("---- DELI Order Menu Screen----");
         System.out.println("1) New Order");
         System.out.println("0) Exit");
@@ -56,9 +57,10 @@ public class UserInterface {
             scanner.nextLine();
 
             if (choice == 1) {
-                addSandwich();
+                SandwichBuilder sandwichBuilder = new SandwichBuilder();
+                order.addSandwich(sandwichBuilder.buildSandwich());
             } else if (choice == 2) {
-                addDrink();
+                order.addDrink(addDrink());
             } else if (choice == 3) {
                 addChips();
             } else if (choice == 4) {
@@ -131,13 +133,34 @@ public class UserInterface {
 
     }
 
-    private void checkout() {
+    public void checkout() {
         System.out.println("\n--- Your Order ---");
         System.out.println(order);
-        System.out.println("Total Amount: $" + order.calculateTotal());
 
-        // Save the order to a receipt file
-        Receipt.saveOrder(order);
-        System.out.println("Order Created and Receipt Saved.");
+        OrderService orderService = new OrderService();
+        double totalAmount = orderService.getTotal(order);
+        System.out.println("Total Amount: $" + totalAmount);
+
+        System.out.println("Is everything added to your order? 1- Yes , 2- No");
+        String confirmation = scanner.nextLine();
+
+        // Handle user input and order saving
+        if (confirmation.equalsIgnoreCase("yes")) {
+            // Attempt to save the order to a receipt file
+            try {
+                Receipt.saveOrder(order);  // Save the order to a file
+                System.out.println("Order Created and Receipt Saved.");
+            } catch (Exception e) {
+                // Handle any errors that occur during the saving process
+                System.err.println("There was an error while saving the receipt: " + e.getMessage());
+            }
+
+        } else if (confirmation.equals("2")) {
+            System.out.println("You can modify your order or continue shopping.");
+            homeScreen();  // Assuming homeScreen() navigates back to the shopping menu
+        } else {
+            // Handle invalid input
+            System.out.println("Invalid input. Please enter 1 for Yes or 2 for No.");
+        }
     }
 }

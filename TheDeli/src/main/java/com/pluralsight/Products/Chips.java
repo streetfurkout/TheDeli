@@ -11,4 +11,11 @@ public class Chips implements ICalculatePrice {
     public double calculatePrice() {
         return 1.5;
     }
+
+    @Override
+    public String toString() {
+        return "Chips{" +
+                "flavour='" + flavour + '\'' +
+                '}';
+    }
 }
