@@ -11,13 +11,15 @@ import java.util.Scanner;
 
 public class UserInterface {
     private Order order;
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);                   // Scanner for user input
 
     public UserInterface() {
         this.order = new Order();
-    }
+    }                // Constructor initializes the order
 
 
+
+    // Home screen method where the user chooses whether to start a new order or exit
     public void homeScreen(){
     boolean running = true;
         while (running){
@@ -27,22 +29,23 @@ public class UserInterface {
         System.out.print("Your Choice: ");
         int choice = scanner.nextInt();
         scanner.nextLine();
-
+// Check user input and proceed accordingly
         if (choice == 1) {
-            displayOrderMenu();
+            displayOrderMenu();                                                         // Proceed to the order menu if user selects '1'
         } else if (choice == 0) {
-            System.out.println("Program Ending...");
-            running = false;
+            System.out.println("Program Ending...");                                    // Exit message if user selects '0'
+            running = false;                                                            // Stop the loop to end the program
         } else {
             System.out.println("Invalid Option!! Please Try Again.");
         }
     }
     }
-
+    // Display the order menu with options to add items to the order
     public void displayOrderMenu() {
         boolean ordering = true;
 
         while (ordering) {
+    // Show available options for adding items
             System.out.println("\n--- Order Menu ---");
             System.out.println("1) Add Sandwich");
             System.out.println("2) Add Drink");
@@ -55,16 +58,16 @@ public class UserInterface {
 
             if (choice == 1) {
                 SandwichBuilder sandwichBuilder = new SandwichBuilder();
-                order.addSandwich(sandwichBuilder.buildSandwich());
+                order.addSandwich(sandwichBuilder.buildSandwich());     // Call to add a new sandwich.
             } else if (choice == 2) {
-                order.addDrink(addDrink());
+                order.addDrink(addDrink());                             // Call to add a drink.
             } else if (choice == 3) {
-                addChips();
+                addChips();                                             // Call to add chips to the order.
             } else if (choice == 4) {
-                checkout();
-                ordering = false;
+                checkout();                                             // Proceed to checkout.
+                ordering = false;                                       // End the ordering process after checkout.
             } else if (choice == 0) {
-                System.out.println("Order Created.");
+                System.out.println("Order Created.");                   // If '0' is selected, stop the order process.
                 ordering = false;
             } else {
                 System.out.println("Invalid Option!! Please Try Again.");
@@ -72,7 +75,7 @@ public class UserInterface {
         }
     }
 
-
+    // Method to handle drink selection process
     public Drink addDrink() {
 
         System.out.println("\n--- Drink Building ---");
@@ -86,6 +89,8 @@ public class UserInterface {
                 "5- Sparkling Water");
         String flavour = scanner.nextLine();
         String selection = null;
+
+    // Use a switch-case to map the user's choice to a drink flavour
         switch (flavour) {
             case "1":
                 selection = "Diet Coke";
@@ -106,9 +111,10 @@ public class UserInterface {
                 System.out.println("Invalid Option!");
 
         }
-        return new Drink(size, selection);
+        return new Drink(size, selection);                  // Return a new Drink object with the selected options
     }
 
+    // Method to handle chips selection process
     private void addChips() {
 
         System.out.println("Please select a flavour.");
@@ -116,6 +122,8 @@ public class UserInterface {
                 "2- Ranch Doritos \n");
         String flavour = scanner.nextLine();
         String selection = null;
+
+    // Use a switch-case to map the user's choice to a chip flavour
         switch (flavour) {
             case "1":
                 selection = "Salty Pepper";
@@ -125,17 +133,17 @@ public class UserInterface {
                 break;
             default:
                 System.out.println("Invalid Option!");
-
+    // Add the selected chips to the order
         }   order.addChips(new Chips(selection));
 
     }
-
+    // Method to handle the checkout process, displaying the order summary and total
     public void checkout() {
         System.out.println("\n--- Your Order ---");
-        System.out.println(order);
+        System.out.println(order);                                          // Display the current order summary
 
         OrderService orderService = new OrderService();
-        double totalAmount = orderService.getTotal(order);
+        double totalAmount = orderService.getTotal(order);                  // Calculate the total order price
         System.out.println("Total Amount: $" + totalAmount);
 
         System.out.println("Is everything added to your order? 1- Yes , 2- No");

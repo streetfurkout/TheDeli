@@ -9,6 +9,7 @@ public abstract class Topping {
 
     }
 
+// Abstract method to get the price of the topping based on the sandwich size.
     public abstract double getPrice(String size);
 
     public String getType() {
