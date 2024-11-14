@@ -1,8 +1,5 @@
 package com.pluralsight.Order;
 
-import com.pluralsight.Order.Order;
-import com.pluralsight.Products.OrderService;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;

@@ -1,6 +1,8 @@
-package com.pluralsight.Products;
+package com.pluralsight.Order;
 
 import com.pluralsight.Order.Order;
+import com.pluralsight.Products.Drink;
+import com.pluralsight.Products.Sandwich;
 
 public class OrderService {
     public double getTotal(Order order){

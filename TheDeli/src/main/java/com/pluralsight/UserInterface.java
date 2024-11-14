@@ -2,14 +2,11 @@ package com.pluralsight;
 
 import com.pluralsight.Order.Order;
 import com.pluralsight.Order.Receipt;
-import com.pluralsight.Products.OrderService;
-import com.pluralsight.Toppings.Topping;
+import com.pluralsight.Order.OrderService;
 import com.pluralsight.Products.Chips;
 import com.pluralsight.Products.Drink;
-import com.pluralsight.Products.Sandwich;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class UserInterface {
