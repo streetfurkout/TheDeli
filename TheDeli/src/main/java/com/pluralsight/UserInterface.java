@@ -146,7 +146,7 @@ public class UserInterface {
         double totalAmount = orderService.getTotal(order);                  // Calculate the total order price
         System.out.println("Total Amount: $" + totalAmount);
 
-        System.out.println("Is everything added to your order? 1- Yes , 2- No");
+        System.out.println("Is everything added to your order?  Yes ,  No");
         String confirmation = scanner.nextLine();
 
         // Handle user input and order saving

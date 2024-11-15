@@ -6,6 +6,7 @@ Deli Application
 
 The Deli app customers can create a new order, and they can build their orders too. When they confirm their order. 
 They can also see their receipt and inside the receipt they can follow their payment amount and date.
+![exportedDiagram.drawio.png](IMGs%2FexportedDiagram.drawio.png)
 
 ## User Stories
 
@@ -52,7 +53,14 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - Any additional libraries or frameworks used in the project.
 
 ## Demo
-![exportedDiagram.drawio.png](IMGs%2FexportedDiagram.drawio.png)
+![HomeScreen.PNG](IMGs%2FHomeScreen.PNG)
+![OrderMenuScreen.PNG](IMGs%2FOrderMenuScreen.PNG)
+![PremiumTopings.PNG](IMGs%2FPremiumTopings.PNG)
+![RegularToppings.PNG](IMGs%2FRegularToppings.PNG)
+![Sauces.PNG](IMGs%2FSauces.PNG)
+![Drinks.PNG](IMGs%2FDrinks.PNG)
+![Chips.PNG](IMGs%2FChips.PNG)
+![Chips.PNG](IMGs%2FChips.PNG)
 
 ## Future Work
 

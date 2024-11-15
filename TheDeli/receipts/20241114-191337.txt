@@ -1,0 +1,5 @@
+Order Summary:
+Order Summary:
+Drink{size='small', flavour='Water'}
+
+Total Cost: $2.0

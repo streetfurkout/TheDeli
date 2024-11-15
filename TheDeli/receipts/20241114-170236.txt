@@ -1,0 +1,7 @@
+Order Summary:
+Order Summary:
+12 inch Rye sandwich (toasted) with toppings: ham, cheddar, ketchup, jalapenos,
+Drink{size='medium', flavour='Diet Coke'}
+Chips{flavour='Salty Pepper'}
+
+Total Cost: $17.75
