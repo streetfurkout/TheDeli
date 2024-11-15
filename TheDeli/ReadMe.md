@@ -4,8 +4,8 @@ Deli Application
 ## Description of the Project
 
 
-The Deli app customers can create a new order, and they can build their orders too. When they confirm their order. 
-They can also see their receipt and inside the receipt they can follow their payment amount and date.
+Customers can create a new order, and they can customize their sandwich orders too. When they confirm their order,
+they can also see their receipt and inside of the receipt they can follow their payment amount and payment date.
 ![exportedDiagram.drawio.png](IMGs%2FexportedDiagram.drawio.png)
 
 ## User Stories
