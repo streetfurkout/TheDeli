@@ -1,0 +1,7 @@
+Order Summary:
+Order Summary:
+8 inch Wheat sandwich (toasted) with toppings: provolone, peppers, onions, jalepenos, cucumbers, pickles, guacamloe, mushrooms, tomato, 
+Drink{size='medium', flavour='Water'}
+Chips{flavour='Salty Pepper'}
+
+Total Cost: $12.5
