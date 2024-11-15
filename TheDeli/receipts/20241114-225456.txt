@@ -1,0 +1,7 @@
+Order Summary:
+Order Summary:
+4 inch White sandwich (toasted) with toppings: ham, cheddar, mustard, peppers, 
+Drink{size='small', flavour='Diet Coke'}
+Chips{flavour='Ranch Doritos'}
+
+Total Cost: $10.75
